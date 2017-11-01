@@ -17,7 +17,7 @@ namespace DecorationMode
             Console.WriteLine("家长签名：");
         }
 
-        public override void sign(string name)
+        override public void sign(string name)
         {
             Console.WriteLine(name);
         }

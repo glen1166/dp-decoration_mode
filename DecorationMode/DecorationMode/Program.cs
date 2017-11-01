@@ -10,9 +10,12 @@ namespace DecorationMode
     {
         static void Main(string[] args)
         {
-            SchoolReport report = new SugarFouthGradeSchoolReport();
-            report.report();
-            report.sign("老三");
+            SchoolReport sr;
+            sr = new FouthGradeSchoolReport();
+            sr = new HighScoreDecorator(sr);
+            sr = new SortDecorator(sr);
+            sr.report();
+            sr.sign("老三");
         }
     }
 }

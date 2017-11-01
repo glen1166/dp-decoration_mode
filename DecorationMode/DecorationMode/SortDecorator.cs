@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DecorationMode
 {
-    public class SugarFouthGradeSchoolReport : FouthGradeSchoolReport
+    public class SortDecorator : Decorator
     {
-        private void reportHighScore()
+        public SortDecorator(SchoolReport sr) : base(sr)
         {
-            Console.WriteLine("这次考试语文最高是75，数学是78，自然是80");
+
         }
 
         private void reportSort()
@@ -20,7 +20,6 @@ namespace DecorationMode
 
         override public void report()
         {
-            this.reportHighScore();
             base.report();
             this.reportSort();
         }
